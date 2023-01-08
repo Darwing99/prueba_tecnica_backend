@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api_persons',
+    'corsheaders'
     'rest_framework'
 ]
 
@@ -55,8 +56,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    'corsheaders.middleware.CorsMiddleware'
+    
 ]
+CORS_ORIGIN_WHITELIST=(
+    'http://localhost:3000',
+    'http://192.168.1.7:3000'
+)
+
+
 
 ROOT_URLCONF = 'crud_api_rest_persons.urls'
 
