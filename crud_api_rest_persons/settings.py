@@ -64,7 +64,9 @@ CORS_ORIGIN_WHITELIST=(
     'http://192.168.1.7:3000'
 )
 
-
+CORS_ALLOW_METHODS=[
+    "DELETE","GET","OPTIONS","PATCH","POST","PUT"
+]
 
 ROOT_URLCONF = 'crud_api_rest_persons.urls'
 
